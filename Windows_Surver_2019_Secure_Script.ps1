@@ -3,7 +3,7 @@
 
 #sets the admin and execution policy from 
 
-#262588213843476. "Self Elevating PowerShell Script or Administrator Rights Required." Gist, #gist.github.com/atao/a103e443ffb37d5d0f0e7097e4342a28. 
+#262588213843476. "Self Elevating PowerShell Script or Administrator Rights Required." Gist, gist.github.com/atao/a103e443ffb37d5d0f0e7097e4342a28. 
 
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }; 
 
